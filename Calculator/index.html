@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mini Calculator</title>
+    <style>
+        .input-box{
+            width: 85%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        }
+        input{
+           font-size: 50px;
+           border: 2px solid rgb(117,117,117);
+           border-radius: 10px;
+    
+        }
+        #button-box{
+            padding-top: 50px;
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        }
+        button{
+            font-size: 50px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-box">
+        <input id="input1" type="Number" placeholder="Enter 1st Number"value = "">
+        <input id="input2" type="Number" placeholder="Enter 2nd Number" value = "">
+    </div>
+    <div id="button-box">
+        <button onclick="getadd()">Add</button>
+        <button onclick="getsubtract()">Subtract</button>
+        <button onclick="getmultiply()">Multiply</button>
+        <button onclick="getdivide()">Divide</button>
+    </div>
+
+
+</body>
+</html>
+<script>
+    function getadd() {
+        let userInput1 = document.getElementById ("input1").value;
+        let userInput2 = document.getElementById("input2").value;
+        let add = (+userInput1 + +userInput2) 
+        alert("your Result is :"+ " "+ add );      
+    }
+    function getsubtract() {
+        let userInput2 = document.getElementById("input1").value;
+        let userInput1 = document.getElementById("input2").value;
+        let subtract = (+userInput1 - +userInput2)
+        alert( "your Result is :" + " " + subtract);
+    }
+    function getmultiply() {
+        let userInput1 = document.getElementById("input1").value;
+        let userInput2 = document.getElementById("input2").value;
+        let multiply = (+userInput1 * +userInput2);
+        alert("your Result is :" + " " + multiply);
+    }
+    function getdivide() {
+        let userInput1 = document.getElementById("input1").value;
+        let userInput2 = document.getElementById("input2").value;
+        let divide = (+userInput1 / +userInput2);
+        alert("your Result is :" + " " + divide);
+    }
+</script>
